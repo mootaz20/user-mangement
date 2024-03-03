@@ -1,0 +1,29 @@
+<div class="allContent">
+    <div class="mainContent">
+        <div class="headerContent">
+            <h1>Task Details</h1>
+            <button (click)="close()"><i class="fa fa-close" aria-hidden="true"></i></button>
+        </div>
+        <div class="line">
+            <div [ngClass]="{loaderClass : isLoading,loaderNot :  !isLoading}" >
+                <div class="loader" *ngIf="isLoading"></div>
+            </div>
+            <div class="content" *ngIf="!isLoading">
+                <div class="firstContent">
+                    <h4>Title: <span>{{taskDetails?.title}}</span></h4>
+                    <h4>Assigned To : <span>{{taskDetails?.assigndTo}} </span></h4>
+                </div>
+                <div class="secondContent">
+                    <h4>Description: <span>{{taskDetails?.descrption}}</span></h4>
+                </div>
+                <div class="thirdContent">
+                    <h4>Created At : <span>{{taskDetails?.createdAt}}</span></h4>
+                </div>
+                <div class="firstContent">
+                    <h4>Priority : <span>{{taskDetails?.priority}}</span></h4>
+                    <h4>Status : <span>{{taskDetails?.status}}</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

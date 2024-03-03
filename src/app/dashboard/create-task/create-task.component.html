@@ -1,0 +1,51 @@
+<div class="allContent">
+    <div class="mainContent">
+        <div class="headerContent">
+            <p>{{isEditMode ? "Update Task" : "Create New Task"}}</p>
+            <button (click)="closeForm()">
+                <i class="fa fa-close" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="content">
+            <form action="#" #taskForm="ngForm" (ngSubmit)="addTask(taskForm)">
+                <div class="inputField1">
+                    <label for="title">Title : </label>
+                    <input type="text" name="title" placeholder="Title" ngModel required>
+                </div>
+                <div class="inputField">
+                    <label for="descrption">Description* :</label>
+                    <textarea name="descrption" id="descrption" cols="40" rows="5" ngModel placeholder="Description"></textarea>
+                </div>
+                <div class="column">
+                    <div class="inputField">
+                        <label>Assigned To :</label>
+                        <input type="assigndTo" ngModel name="assigndTo" required>
+                    </div>
+                    <div class="inputField">
+                        <label>Created At :</label>
+                        <input type="date" ngModel name="createdAt" required>
+                    </div>
+                </div>
+                <div class="column">
+                   <div class="inputField">
+                       <select name="status" id="Status" ngModel>
+                        <option value="start">Start</option>
+                        <option value="open">Open</option>
+                        <option value="in-progress">In progress</option>
+                        <option value="end">End</option>
+                       </select>
+                   </div>
+                   <div class="inputField">
+                       <select name="priority" id="Priority" ngModel>
+                        <option value="critial">Critial</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                       </select>
+                   </div>
+                </div>
+                <div class="btn"><button type="submit">{{isEditMode ? "Update Task" : "Create Task"}}</button></div>
+            </form>
+        </div>
+    </div>
+</div>

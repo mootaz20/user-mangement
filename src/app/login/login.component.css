@@ -1,0 +1,56 @@
+.allContent{
+    padding: 40px;
+}
+.allContent .mainContent{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 2px 2px 20px 2px black;
+}
+.allContent .mainContent  h2{
+    font-size: 30px;
+    color: aqua;
+    margin: 10px;
+}
+.allContent .mainContent .formStyle{
+    margin: 0;
+}
+.allContent .mainContent .formStyle  input{
+    width: 70%;
+    height: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    border: solid 2px black;
+    margin: 0 0 10px;
+}
+.allContent .mainContent .formStyle  button{
+   width: 35%;
+   height: 35px;
+   margin: 10px;
+   border: solid 2px black;
+   cursor: pointer;
+   font-size: 25px;
+   font-weight: bold;
+   background-color: black;
+   color: white;
+   box-shadow: 2px 2px 5px 6px black;
+}
+.allContent .mainContent .convert p{
+    font-size: 17px;
+    font-weight: bold;
+}
+.allContent .mainContent .convert p button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(54, 54, 54);
+    text-decoration: solid underline black;
+    font-size: 17px;
+    font-weight: bold;
+}
+.disabled{
+    opacity: .7;
+}

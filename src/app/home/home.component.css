@@ -1,0 +1,21 @@
+.allContent{
+    font-weight: bold;
+    color: rgb(42, 41, 41);
+    padding: 30px 0 0;
+}
+.allContent .mainContent{
+    width: 80%;
+    margin: auto;
+    background-color: rgb(235, 241, 241);
+    padding: 30px;
+    text-align: center;
+}
+.allContent .mainContent .content{
+    padding: 20px;
+    display: flex;
+    font-size: 20px;
+}
+h1{
+    font-family: "Times New Roman", Times, serif;
+    color: aqua;
+}

@@ -1,0 +1,49 @@
+<app-create-task
+    *ngIf="showCreateTask"
+    (close)="closeForm()"
+    (CreateTask)="CreateNewTask($event)"
+    [editTask]="editTaskToCreate"
+    [isEditMode]="isEditMode"
+></app-create-task>
+<app-task-details
+    *ngIf="showTaskDetails"
+    (closeDetails)="close()"
+    [Id]="currentId"
+></app-task-details>
+<div class="allContent">
+    <div class="mainContent">
+        <div class="contentHeader">
+            <h2>Task Menu</h2>
+            <div class="groupOfButton">
+                <button class="btn" (click)="showCreateTaskMethod()">Create Task</button>
+                <button class="btn" (click)="ClearAllTask()">Clear all task</button>
+            </div>
+        </div>
+        <div class="contentBody">
+            <div class="theContent">
+                <!-- <div >
+                    <h3>No tasks to display</h3>
+                </div> -->
+                <div [ngClass]="{loaderClass : isloading,loaderNot :  !isloading}" >
+                    <div class="loader" *ngIf="isloading"></div>
+                </div>
+                <div class="card" *ngFor="let item of tasks; let i = index;">
+                    <div class={{item.status}}></div>
+                    <div class="info">
+                        <div class="content">
+                            <h2>{{item.title}}</h2>
+                            <h4>Assignd to : <span>{{ item.assigndTo }}</span></h4>
+                            <h4>Priority : <span>{{item.priority}}</span></h4>
+                            <h4>Status : <span>{{item.status}}</span></h4>
+                        </div>
+                        <div class="icon">
+                            <button class="btn-action-click" (click)="updateTask(item)"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                            <button class="btn-action-click" (click)="deleteTask(item.key)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            <button class="btn-action-click" (click)="showDetails(item.key)"><i class="fa fa-info-circle" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

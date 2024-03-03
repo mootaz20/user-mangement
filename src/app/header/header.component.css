@@ -1,0 +1,30 @@
+.mainHeader{
+    width: 100%;
+    margin: 20px auto;
+    height: 100px;
+    color: white;
+    background-color: rgb(15, 13, 13);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    text-shadow: 1px 1px aqua;
+}
+.mainHeader .mainPages .pages{
+    display: flex;
+}
+.mainHeader .mainPages .pages li{
+    margin-right: 30px;
+    list-style-type: none;
+    font-size: 21px;
+}
+.mainHeader .mainPages .pages li a{
+   text-decoration: none;
+   color: white;
+}
+.active{
+   color: aqua !important;
+}
+.logout{
+    cursor: pointer;
+}

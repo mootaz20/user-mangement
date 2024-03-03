@@ -1,0 +1,29 @@
+<div class="mainHeader">
+    <div class="title">
+        <h1>TASK MANGEMENT</h1>
+    </div>
+    <div class="mainPages">
+        <ul class="pages">
+            <li>
+                <a routerLink="" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">
+                    HOME
+                </a>
+            </li>
+            <li *ngIf="isLoggoed">
+                <a routerLink="dashboard" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">
+                    DASHBOARD
+                </a>
+            </li>
+            <li *ngIf="!isLoggoed">
+                <a routerLink="login&signup" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact : true}">
+                    LOGIN&SIGNUP
+                </a>
+            </li>
+            <li *ngIf="isLoggoed">
+                <a class="logout" style="cursor: pointer;" (click)="Logout()">
+                    LOGOUT
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

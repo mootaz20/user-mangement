@@ -1,0 +1,27 @@
+<div class="allContent">
+    <div class="mainContent">
+        <h2>{{isLoginMode ? 'Please Login' : 'Please Signup'}}</h2>
+        <div class="formStyle">
+            <form (ngSubmit)="onFormSubmit(LoginAndSignup)" #LoginAndSignup="ngForm" novalidate>
+                <div>
+                    <input type="email" name="email" id="email" ngModel placeholder="Email Address" email required/>
+                    <br>
+                </div>
+                <div>
+                    <input type="password" minlength="8" ngModel name="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit"
+                    [disabled]="LoginAndSignup.invalid"
+                    [ngClass]="{disabled: LoginAndSignup.invalid}"
+                >{{isLoginMode ? 'Login' : 'Signup'}}</button>
+            </form>
+        </div>
+        <div class="convert">
+            <p>{{isLoginMode ? 'if you dont have an account please' : 'you have account !'}} 
+                <button (click)="convertFromLoginToRegister()">
+                    {{isLoginMode ? ' register here' : 'Login here'}}
+                    </button>
+                </p>
+        </div>
+    </div>
+</div>
